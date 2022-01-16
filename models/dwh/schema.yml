@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bases_loaded
+    description: "dummy dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
