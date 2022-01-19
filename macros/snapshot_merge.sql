@@ -1,4 +1,4 @@
-{% macro default__snapshot_merge_sql(target, source, insert_cols) -%}
+{% macro snapshot_merge_sql(target, source, insert_cols) -%}
     {%- set insert_cols_csv = insert_cols | join(', ') -%}
 
     merge into {{ target }} as DBT_INTERNAL_DEST

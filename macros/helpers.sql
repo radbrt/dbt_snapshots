@@ -1,4 +1,4 @@
-{% macro build_snapshot_table(strategy, sql) %}
+{% macro default__build_snapshot_table(strategy, sql) %}
 
     select *,
         {{ strategy.scd_id }} as dbt_scd_id,
@@ -11,3 +11,5 @@
     ) sbq
 
 {% endmacro %}
+
+
